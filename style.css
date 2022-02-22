@@ -3,5 +3,63 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --text:hsl(193, 38%, 86%);
+  --backgroundColor: hsl(217, 19%, 38%);
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: var(--backgroundColor);
+  }
+  #cardContainer {
+    height: 500px;
+    width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #cardContainer .card {
+    border: solid red;
+    width: 300px;
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #cardContainer .card .card__quoteContainer {
+    color: var(--text);
+  }
+  #cardContainer .card .card__quoteContainer .quote__quoteDivider {
+    background: url(./images/pattern-divider-mobile.svg) center/cover no-repeat;
+    height: 50px;
+    width: 200px;
+    font-weight: 800;
+  }
 }
 /*# sourceMappingURL=style.css.map */
