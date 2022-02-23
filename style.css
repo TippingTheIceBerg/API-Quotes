@@ -13,7 +13,8 @@ body, html {
 
 :root {
   --text:hsl(193, 38%, 86%);
-  --backgroundColor: hsl(217, 19%, 38%);
+  --backgroundColor: hsl(217, 19%, 24%);
+  --diceGreen: hsl(150, 100%, 66%);
 }
 
 @media screen and (max-width: 500px) {
@@ -51,15 +52,35 @@ body, html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
   }
   #cardContainer .card .card__quoteContainer {
     color: var(--text);
   }
   #cardContainer .card .card__quoteContainer .quote__quoteDivider {
     background: url(./images/pattern-divider-mobile.svg) center/cover no-repeat;
-    height: 50px;
-    width: 200px;
-    font-weight: 800;
+    width: 250px;
+    color: red;
+    height: 20px;
+  }
+  #cardContainer .card .card__quoteContainer .quote__quoteClick {
+    background-color: var(--diceGreen);
+    border-radius: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px;
+    width: 50px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 125px;
   }
 }
 /*# sourceMappingURL=style.css.map */
